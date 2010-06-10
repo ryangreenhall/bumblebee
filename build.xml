@@ -1,0 +1,21 @@
+<project name="rhino-jspec" basedir="." default="examples">
+
+    <macrodef name="execute.specs">
+        <attribute name="src"/>
+        <sequential>
+            <apply executable="java" failonerror="true" relative="false" parallel="false">
+                <arg value="-jar"/>
+                <arg value="dependencies/jar/js.jar"/>
+                <arg value="lib/jspec.runner.js"/>
+                <fileset dir="@{src}">
+                    <include name="**/*spec.js"/>
+                </fileset>
+            </apply>
+        </sequential>
+    </macrodef>
+
+    <target name="examples" description="Executes the specs in the example directory.">
+        <execute.specs src="examples/spec"/>
+    </target>
+
+</project>
