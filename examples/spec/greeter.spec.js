@@ -1,6 +1,8 @@
 describe('Greeter', function() {
 
+    load('examples/src/greeter.js');
+
     it('greets people', function() {
-      expect("Hello").to(eql, 'Hello');
+      expect(greeter().greet()).to(eql, 'Hello!');
     });
 });
