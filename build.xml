@@ -3,16 +3,16 @@
     <macrodef name="execute.specs">
         <attribute name="src"/>
         <sequential>
-            <apply executable="java" failonerror="true" relative="false" parallel="false">
+            <exec executable="java" failonerror="true">
                 <arg value="-jar"/>
                 <arg value="dependencies/jar/js.jar"/>
                 <arg value="-opt"/>
                 <arg value="-1"/>
                 <arg value="lib/jspec.runner.js"/>
-                <fileset dir="@{src}">
-                    <include name="**/*spec.js"/>
-                </fileset>
-            </apply>
+                <!--<fileset dir="@{src}">-->
+                    <!--<include name="**/*spec.js"/>-->
+                <!--</fileset>-->
+            </exec>
         </sequential>
     </macrodef>
 
