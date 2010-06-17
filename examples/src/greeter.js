@@ -1,5 +1,4 @@
-var example = {};
-example.greeter = function(){
+greeter = function(){
     var that = {};
     that.greet = function() {
         return "Hello!";
