@@ -1,10 +1,5 @@
 <project name="rhino-jspec" basedir="." default="examples">
 
-    <scriptdef name="jspec"
-               src="lib/bumblebee.js"
-               language="javascript">
-        <element name="fileset" type="fileset"/>
-    </scriptdef>
 
     <macrodef name="run.specs">
         <attribute name="src"/>
