@@ -6,24 +6,24 @@
         <element name="fileset" type="fileset"/>
     </scriptdef>
 
-    <macrodef name="execute.specs">
+    <macrodef name="run.specs">
         <attribute name="src"/>
         <sequential>
-            <exec executable="java" failonerror="true">
+            <apply executable="java" parallel="true">
                 <arg value="-jar"/>
                 <arg value="dependencies/jar/js.jar"/>
                 <arg value="-opt"/>
                 <arg value="-1"/>
                 <arg value="lib/jspec.runner.js"/>
-                <!--<fileset dir="@{src}">-->
-                    <!--<include name="**/*spec.js"/>-->
-                <!--</fileset>-->
-            </exec>
+                <fileset dir="@{src}">
+                    <include name="**/*spec.js"/>
+                </fileset>
+            </apply>
         </sequential>
     </macrodef>
 
     <target name="examples" description="Executes the specs in the example directory.">
-        <execute.specs src="examples/spec"/>
+        <run.specs src="examples/spec"/>
     </target>
 
     <target name="run.examples" description="">
