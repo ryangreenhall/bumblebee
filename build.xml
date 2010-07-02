@@ -1,6 +1,5 @@
 <project name="rhino-jspec" basedir="." default="examples">
 
-
     <macrodef name="run.specs">
         <attribute name="src"/>
         <sequential>
@@ -9,7 +8,7 @@
                 <arg value="dependencies/jar/js.jar"/>
                 <arg value="-opt"/>
                 <arg value="-1"/>
-                <arg value="lib/jspec.runner.js"/>
+                <arg value="lib/bumblebee.js"/>
                 <fileset dir="@{src}">
                     <include name="**/*spec.js"/>
                 </fileset>
@@ -19,14 +18,6 @@
 
     <target name="examples" description="Executes the specs in the example directory.">
         <run.specs src="examples/spec"/>
-    </target>
-
-    <target name="run.examples" description="">
-        <jspec>
-             <fileset dir="examples/spec">
-                <include name="*.js"/>
-            </fileset>
-        </jspec>
     </target>
 
 </project>
