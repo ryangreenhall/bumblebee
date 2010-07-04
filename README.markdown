@@ -7,8 +7,8 @@ Bumblebee combines Rhino, JSpec, Envjs and Ant to provide an "out of the box" Ja
 
 The best place to start is with the examples:
 
-git clone http://github.com/ryangreenhall/bumblebee
-ant examples
+1. git clone http://github.com/ryangreenhall/bumblebee
+2. ant examples
 
 
 
