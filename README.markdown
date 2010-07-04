@@ -1,6 +1,7 @@
 #Bumblebee
 
-Bumblebee combines Rhino, JSpec, Envjs and Ant to provide an "out of the box" JavaScript testing toolkit.
+Bumblebee combines Rhino, JSpec, Envjs and Ant to provide an "out of the box" JavaScript testing toolkit where specs can
+easily be added to your automated CI build.
 
 
 ## Getting Started
